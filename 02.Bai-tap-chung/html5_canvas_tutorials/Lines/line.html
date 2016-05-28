@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Line</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="my_canvas" width="578" height="200">
+
+    </canvas>
+
+    <!--javascript-->
+    <script>
+        var canvas = document.getElementById('my_canvas');
+        var context = canvas.getContext('2d');
+
+        //khai bao ve hinh can ve
+        context.beginPath();
+
+        //di chuyen den doan can phai ve ma ko phai tao ra duong thang
+        context.moveTo(100, 150); //truc toa do cua id my_canvas
+        
+        //ve doan thang
+        context.lineTo(450, 50); //tu x: 450, y: 50
+
+        //chieu rong cua net ve
+        context.lineWidth = 5;
+
+        //to mau cho net ve da duoc khai bao truoc
+        context.strokeStyle = 'blue';
+
+        //ve hinh dua tren nhung thong tin da khai bao
+        context.stroke();
+    </script>
+    <!--end javascript-->
+</body>
+</html>
